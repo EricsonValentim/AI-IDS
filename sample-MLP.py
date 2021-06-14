@@ -36,7 +36,7 @@ colunas_dataset = ['Timestamp', 'Flow Duration', 'Tot Fwd Pkts',
               'Active Min', 'Idle Mean', 'Idle Std', 'Idle Max', 'Idle Min', 'Label']
 
 
-data_frame = load_data('C:/Aula/Mestrado/Entrada/arquiveCICFlowMeterPreprocessing.csv', colunas_dataset) #Sample Path Windows 10
+data_frame = load_data('C:/AI/IDS/Sample/Out/arquiveCICFlowMeterPreprocessing.csv', colunas_dataset) #Sample Path Windows 10
 
 
 atributos_preditores = ['Timestamp', 'Flow Duration', 'Tot Fwd Pkts',
@@ -101,11 +101,11 @@ x_teste = scaler.transform(x_teste)
 # salvar modelo
 import pickle
 #salvar o modelo (mlp_model) no arquivo rfModel.pkl
-with open('C:/Aula/Mestrado/Saida/MLP-Model.pkl', 'wb') as file:
+with open('C:/AI-IDS/Sample/Out/MLP-Model.pkl', 'wb') as file:
     pickle.dump(model, file)
 
 # Carregar modelo
-with open('C:/Aula/Mestrado/Saida/MLP-Model.pkl', 'rb') as f:
+with open('C:/AI-IDS/Sample/Out/MLP-Model.pkl', 'rb') as f:
     modelLoad = pickle.load(f)
         
 model = modelLoad
