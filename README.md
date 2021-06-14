@@ -5,6 +5,8 @@ A Methodology to verify IDS AI-basedApproaches on Emulated Networks
 
 This project shares with the academic community the methodology to evaluate machine learning and deep learning techniques in Intrusion Detection Systems.
 
+Internet traffic has been growing in recent years and, with the advent of the pandemic that devastates the world, it increases the role in activities related to health, communication, economy, social and so on. Cybersecurity has long been viewed as an effective use for AI. Constantly changing cybersecurity environments, resource scarcity and a lack of skilled employees has prompted companies to look for off-shelf AI-enabled cybersecurity solutions to meet ever-evolving requirements. Intrusion Detection Systems(IDSs) still face challenges in improving detection accuracy and reducing false alarm rates. This work presents a methodology to test and validate AI-based IDS approaches. The aim is to allow researchers and IDS developers to verify whether their solutions are effective in a fast and comparative way. IDS based on machine learning and deep learning are often being deployed as potential solutions to efficiently detect network intrusions. In order to analyse both AI method and available reused or produced datasets, this paper presents a testbed based on emulated network that provides an environment for rapidly prototyping the solution. As a result, we have a scalable, high-level interface testbed that enables community focuses on their approach with less worries about test environment issues.
+
 
 The virtual machines used in the project are available for download through the link below in the Google Drive repository.
 https://drive.google.com/drive/folders/1hSm_f8KMQ8OnMLjIvOQyZ6wNN-5ykEj2?usp=sharing
