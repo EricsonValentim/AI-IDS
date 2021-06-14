@@ -7,9 +7,9 @@ import pandas as pd
 from sklearn.utils import shuffle
 
 
-entrada = 'C:/Aula/Mestrado/Entrada/capturaCSV.csv'
+entrada = 'C:/AI-IDS/Sample/In/captureCSV-CICFlowMeter.csv'
 
-saida = 'C:/Aula/Mestrado/Saida/preprossesingCICFlowMeter.csv'
+saida = 'C:/AI-IDS/Sample/Out/preprossesing.csv'
 
 contador = 1
 salvarDados = {}
@@ -100,7 +100,7 @@ print("Fim da Execução")
 
 #dados.drop_duplicates() # Remover duplocados
 
-# COnverte os Label em binário - Bening = 0 e Ataque = 1
+# Converte os Label em binário - Bening = 0 e Ataque = 1
 #dados['Label'] = dados['Label'].map(
 #    {'Benign': 0, 'Attak': 1})
     
