@@ -27,12 +27,12 @@ The data used to train the classifier is taken from the CSE-CIC-IDS2018 dataset 
 
 The dataset contains approximately 16 million individual network streams and covers the following attack scenarios:
 
-Brute force
-From,
-Ddos
-heartbleed,
-Web Attack,
-Infiltration,
-Botnet.
+- Brute force
+- From
+- DDOS
+- Heartbleed
+- Web Attack
+- Infiltration
+- Botnet
 
 https://www.unb.ca/cic/datasets/ids-2018.html
