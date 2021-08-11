@@ -1,0 +1,11 @@
+
+
+In the context of expert users. It is possible to run a user-created template. Before starting it is necessary to install all packages and dependencies of the chosen model. 
+This process can be performed via the PIP on the Ubuntu IDS virtual machine. 
+Templates must be exported in extension (.PKL). The Examples directory has 4 examples of complete techniques to facilitate the creation and export of new models.
+
+To facilitate the creation of new datasets we developed a script to insert the labels of benign network traffic (0) or malicious network traffic (1) after running 
+the CICFlowMeter tool which generates an output file in (.CSV) format. 
+After inserting the labels in this file, it is possible to train in different techniques for different types of attacks.
+
+The preprocessing step is detailed in the preprocessing.py configuration file.
