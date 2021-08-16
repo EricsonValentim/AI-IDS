@@ -45,7 +45,7 @@ The host computer's network interface must be publicly shared to access the Inte
 
 The virtual environment has the following architecture:
 
-![smartIDS](https://drive.google.com/file/d/1eywX2dUdEYxhVht8boatZoOB-_x6IY-t/view?usp=sharing)
+
 
 The nodes will be responsible for simulating cyber attacks both for the LAN network and for any of the DMZ servers (WEB or SGBD). A VM based on the Kali Linux distribution has the system tools pre-installed and we've added some other parts of the solution, like the anaconda package python3, scapy to generate custom data packages according to the desired attack type and slowloris script to generate denial service and CICFlowMeter type attacks.
 
