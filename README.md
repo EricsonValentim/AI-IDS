@@ -45,6 +45,8 @@ The host computer's network interface must be publicly shared to access the Inte
 
 The virtual environment has the following architecture:
 
+![smartIDS](https://drive.google.com/file/d/1eywX2dUdEYxhVht8boatZoOB-_x6IY-t/view?usp=sharing)
+
 The nodes will be responsible for simulating cyber attacks both for the LAN network and for any of the DMZ servers (WEB or SGBD). A VM based on the Kali Linux distribution has the system tools pre-installed and we've added some other parts of the solution, like the anaconda package python3, scapy to generate custom data packages according to the desired attack type and slowloris script to generate denial service and CICFlowMeter type attacks.
 
 The main component in this scenario is the IDS. It is a Linux VM with 16 GB of memory and three virtual processors, being responsible for checking network traffic and detecting possible intrusions through the CICFlowMeter tool, as well as a tool to manage ML or DL models and relational database to store information from detection for further evaluation.
@@ -56,25 +58,62 @@ The DMZ is composed of two VMs, both with Linux operating system. The WEB server
 Remembering that the entire virtual environment is perfectly adaptable and scalable according to the user's needs. If any adjustment is necessary, just configure the new devices with the appropriate network range. More details are available in the project topology figure.
 
 
+
 ## VM IDS
 
-Esta VM está localizada no núcleo do ambiente virtual. Ele também gerencia todo o tráfego de rede que entra ou saí da DMZ ou LAN. É responsável por executar a captura do tráfego de rede para gerar novos cojuntos de dados através da ferramenta CICFlowMeter que converte esses fluxos de rede e extraí como saída um arquivo no formato .CSV que é utuilizado para treinamento e teste das técnicas de AI. Possui a interface gráfica que foi desenvolvida para facilitar a utilização das técnicas de AI para IDS.
+Esta VM está localizada no núcleo do ambiente virtual. 
+Ele também gerencia todo o tráfego de rede que entra ou saí da DMZ ou LAN. 
+É responsável por executar a captura do tráfego de rede para gerar novos cojuntos de dados através da 
+ferramenta CICFlowMeter que converte esses fluxos de rede e extraí como saída um arquivo no formato .CSV 
+que é utuilizado para treinamento e teste das técnicas de AI. Possui a interface gráfica que foi desenvolvida 
+para facilitar a aplicação das técnicas de AI para IDS.
 
 Start the script with network routes:
 ```sh
 cd /home/ubunutu
-sudo ./script
+./script
 ```
 
+Executar ferramenta CICFlowMeter:
+```sh
+cd /home/ubunutu/CICFlowMeter-master
+gradle execute
+```
 
-Executar ferramenta CICFlowMeter 
+Escolher modo de operação: Offline ou Realtime. No modo Offline a ferramenta recebe uma captura do tráfego de rede
+no formato .PCAP e no modo Realtime a captura iniciar em tempo real após escolha da interface de rede. Em ambos os modos a saída
+da ferramenta gera um arquivo .CSV contendo 84 recursos do tráfego de rede analisado e um campo Label que é utilizado como classe alvo
+durante o treinamento e testes das técnicas de AI. 
+
+Os arquivos .CSV de saída da ferramenta ficam disponíveis no diretório `/home/ubunutu/CICFlowMeter-master/data/daily`
+
+Para criar novos datasets é necessário rotular o arquivo .CSV que o CICFlowMeter gerou. Por padrão o campo Label vem configurado como:
+"No Label". No diretório `/home/ubunutu/IDS` está um script simples para rotular o arquivo. Caso contrário o usuário pode
+utilizar algum dos arquivos do CSE-CIC-IDS2018.
+
+```sh
+cd /home/ubunutu/IDS
+nano labeled.py
+```
+
+O Label é ajustado para binário. Altere o caminho de entrada e a função de conversão deve ser comentada de acordo com o tipo de trágego do arquivo. "0" para tráfego de rede do tipo Benigno e 
+"1" para tráfego de rede de malicioso.
+
+Através da interface gráfica desenvolvida é possível executar os testes de uma maneira mais fácil. O que não impede a utilização e modificação
+dela por usuários avançados. 
+
+Execução da interface gráfica:
+```sh
+cd /home/ubunutu/IDS
+python3 screenIDS.py
+```
+
+![smartIDS](https://drive.google.com/file/d/1kTC30SnEb5pSI9aUr3Cb2yxMUiqAaR0r/view?usp=sharing)
+
 
 ## VM Kali Linux
 
-Esta VM está localizada na rede de ataque. Onde é possível executar ataques para o IDS, servidor e serviços da DMZ (WEB e SGBD) e LAN. 
-
-
-
-
-
+Esta VM está localizada na rede de ataque. 
+Responsável por executar ataques para o IDS, servidor e serviços da DMZ (WEB e SGBD) e LAN. Este sistema possui diversas ferramentas
+instaladas para execução de testes de intrusão de rede.
 
