@@ -39,7 +39,23 @@ https://www.unb.ca/cic/datasets/ids-2018.html
 The virtual machines, emulated environment project (GNS3) and software used in the project are available for download via the link below in the Google Drive repository.
 https://drive.google.com/drive/folders/1hSm_f8KMQ8OnMLjIvOQyZ6wNN-5ykEj2?usp=sharing
 
-By downloading the entire repository and installing the software. You need to adjust the virtual hardware settings on each VM as per your needs. For example the VM IDS comes configured with 16 GB of RAM memory and 2 virtual processors. We recommend using at least 4 GB on this VM. The others can run with at least 1.5 GB of memory. Remember that this process must be performed in Virtual Box and in GNS3.
+By downloading the entire repository and installing the software. You need to adjust the virtual hardware settings on each VM as per your needs. For example the VM IDS comes configured with 16 GB of RAM memory and 3 virtual processors. We recommend using at least 4 GB on this VM. The others can run with at least 1.5 GB of memory. Remember that this process must be performed in Virtual Box and in GNS3.
+
+The host computer's network interface must be publicly shared to access the Internet through the virtual environment.
+
+The virtual environment has the following architecture:
+
+The nodes will be responsible for simulating cyber attacks both for the LAN network and for any of the DMZ servers (WEB or SGBD). A VM based on the Kali Linux distribution has the system tools pre-installed and we've added some other parts of the solution, like the anaconda package python3, scapy to generate custom data packages according to the desired attack type and slowloris script to generate denial service and CICFlowMeter type attacks.
+
+The main component in this scenario is the IDS. It is a Linux VM with 16 GB of memory and three virtual processors, being responsible for checking network traffic and detecting possible intrusions through the CICFlowMeter tool, as well as a tool to manage ML or DL models and relational database to store information from detection for further evaluation.
+
+IDS has 3 network interfaces. One for connecting to the external router, one for the DMZ network where the local servers are located and the last interface for connecting to the LAN where the user devices are located.
+
+The DMZ is composed of two VMs, both with Linux operating system. The WEB server is a VM running apache2. SGBD is a VM that runs the following services: apache2, sshd, ftpd and mysql. LAN devices are additional components that allow you to simulate a real-world environment.
+
+Remembering that the entire virtual environment is perfectly adaptable and scalable according to the user's needs. If any adjustment is necessary, just configure the new devices with the appropriate network range. More details are available in the project topology figure.
+
+
 
 
 
