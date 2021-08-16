@@ -56,6 +56,25 @@ The DMZ is composed of two VMs, both with Linux operating system. The WEB server
 Remembering that the entire virtual environment is perfectly adaptable and scalable according to the user's needs. If any adjustment is necessary, just configure the new devices with the appropriate network range. More details are available in the project topology figure.
 
 
+## VM IDS
+
+Esta VM está localizada no núcleo do ambiente virtual. Ele também gerencia todo o tráfego de rede que entra ou saí da DMZ ou LAN. É responsável por executar a captura do tráfego de rede para gerar novos cojuntos de dados através da ferramenta CICFlowMeter que converte esses fluxos de rede e extraí como saída um arquivo no formato .CSV que é utuilizado para treinamento e teste das técnicas de AI. Possui a interface gráfica que foi desenvolvida para facilitar a utilização das técnicas de AI para IDS.
+
+Start the script with network routes:
+```sh
+cd /home/ubunutu
+sudo ./script
+```
+
+
+Executar ferramenta CICFlowMeter 
+
+## VM Kali Linux
+
+Esta VM está localizada na rede de ataque. Onde é possível executar ataques para o IDS, servidor e serviços da DMZ (WEB e SGBD) e LAN. 
+
+
+
 
 
 
