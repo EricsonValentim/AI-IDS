@@ -6,7 +6,10 @@ This project shares with the academic community the methodology to evaluate mach
 
 Internet traffic has been growing in recent years and, with the advent of the pandemic that devastates the world, it increases the role in activities related to health, communication, economy, social and so on. Constantly changing cybersecurity environments, resource scarcity and a lack of skilled employees has prompted companies to look for off-shelf AI-enabled cybersecurity solutions to meet ever-evolving requirements. Intrusion Detection Systems(IDSs) still need to improve detection accuracy and reduce false alarm rates. This work presents a testbed to test and validate AI-based IDS approaches. The aim is to allow researchers and IDS developers to verify whether their solutions are effective in a fast and comparative way. In order to analyse both AI method and available reused or produced datasets, this paper presents a testbed based on emulated network that provides an environment for rapidly prototyping the solution. As a result, we have a scalable, high-level interface environment that enables community focuses on their approach with less worries about test environment issues.
 
+
 A detailed example for expert users is available along with the output file preprocessing step of the CICFlowMeter tool.
+
+
 
 Dataset used to create predefined templates: CSE-CIC-IDS2018
 
@@ -39,6 +42,7 @@ To install and run the virtual environment, the following hardware requirements 
 - Intel or AMD 4-core processor
 - Ethernet network card
 
+
 It is recommended to use Windows 10 PRO operating system.
 
 ## Download and Install
@@ -61,6 +65,8 @@ IDS has 3 network interfaces. One for connecting to the external router, one for
 The DMZ is composed of two VMs, both with Linux operating system. The WEB server is a VM running apache2. SGBD is a VM that runs the following services: apache2, sshd, ftpd and mysql. LAN devices are additional components that allow you to simulate a real-world environment.
 
 Remembering that the entire virtual environment is perfectly adaptable and scalable according to the user's needs. If any adjustment is necessary, just configure the new devices with the appropriate network range. More details are available in the project topology figure.
+
+
 
 ## VM Ubuntu IDS
 
@@ -105,6 +111,7 @@ Label is set to binary. Change the input path and the conversion function should
 Through the developed graphical interface [smartIDS](https://github.com/EricsonValentim/AI-IDS/blob/main/smartIDS.png) it is possible to run the tests in an easier way.
 This does not prevent use and modification by advanced users.
 
+
 The interface is divided into 2 modes of operation: simple and advanced.
 
 #Simple Mode
@@ -128,6 +135,8 @@ Specific Imports must be inserted directly into the smartIDS-Advanced interface 
 
 Initially it is necessary to train and evaluate your model before carrying out the loading. The CSE-CIC-IDS2018 dataset,
   a dataset generated in the virtual environment containing the network capture between the Kali VM running the 'Slowloris' script to generate DOS attacks and the WEB VM with about 80,000 records and examples of training and validation of predefined models is available at `/home/ubuntu/IDS` directory.
+
+In the project's Google Drive, we make available a dataset containing network traffic of the Benigno type for training and testing the user-customized models. During project development new datasets will be added to Google Drive. You need to download and upload them to VM IDS.
 
   After performing the training and exporting your model in (.pkl) format, following the project examples, just start the interface in advanced mode and load your model.
 
