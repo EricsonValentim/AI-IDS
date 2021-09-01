@@ -7,11 +7,11 @@ This project shares with the academic community the methodology to evaluate mach
 Internet traffic has been growing in recent years and, with the advent of the pandemic that devastates the world, it increases the role in activities related to health, communication, economy, social and so on. Constantly changing cybersecurity environments, resource scarcity and a lack of skilled employees has prompted companies to look for off-shelf AI-enabled cybersecurity solutions to meet ever-evolving requirements. Intrusion Detection Systems(IDSs) still need to improve detection accuracy and reduce false alarm rates. This work presents a testbed to test and validate AI-based IDS approaches. The aim is to allow researchers and IDS developers to verify whether their solutions are effective in a fast and comparative way. In order to analyse both AI method and available reused or produced datasets, this paper presents a testbed based on emulated network that provides an environment for rapidly prototyping the solution. As a result, we have a scalable, high-level interface environment that enables community focuses on their approach with less worries about test environment issues.
 
 
-A detailed example for expert users is available along with the output file preprocessing step of the CICFlowMeter tool.
+A detailed example for expert users is available along with the output file preprocessing step of the ![CICFlowMeter](https://github.com/ahlashkari/CICFlowMeter) tool.
 
 
 
-Dataset used to create predefined templates: CSE-CIC-IDS2018
+Dataset used to create predefined templates: ![CSE-CIC-IDS2018](https://www.unb.ca/cic/datasets/ids-2018.html)
 
 The data used to train the classifier is taken from the CSE-CIC-IDS2018 dataset provided by the Canadian Institute of Cyber Security. It was created by capturing all network traffic during ten days of operation within a controlled network environment on AWS, where realistic background traffic and different attack scenarios were conducted. As a result, the dataset contains both benign network traffic and captures of the most common network attacks. The dataset is composed of raw network captures in pcap format as well as csv files created using CICFlowMeter-V3 containing 80 stats of the individual network flows combined with their corresponding labels. A network flow is defined as an aggregation of interrelated network packets identified by the following properties:
 
@@ -30,8 +30,6 @@ The dataset contains approximately 16 million individual network streams and cov
 - Infiltration
 - Botnet
 
-https://www.unb.ca/cic/datasets/ids-2018.html
-
 
 ## Minimum Requirements
 
@@ -47,8 +45,9 @@ It is recommended to use Windows 10 PRO operating system.
 
 ## Download and Install
 
-The virtual machines, emulated environment project (GNS3) and software used in the project are available for download via the link below in the Google Drive repository.
-https://drive.google.com/drive/folders/1hSm_f8KMQ8OnMLjIvOQyZ6wNN-5ykEj2?usp=sharing
+The virtual machines, emulated environment project (GNS3) and software used in the project are available for download via the link below in the 
+![Google Drive repository](https://drive.google.com/drive/folders/1hSm_f8KMQ8OnMLjIvOQyZ6wNN-5ykEj2?usp=sharing
+)
 
 By downloading the entire repository and installing the software. You need to adjust the virtual hardware settings on each VM as per your needs. For example the VM IDS comes configured with 16 GB of RAM memory and 3 virtual processors. We recommend using at least 4 GB on this VM. The others can run with at least 1.5 GB of memory. Remember that this process must be performed in Virtual Box and in GNS3.
 
@@ -56,7 +55,7 @@ The host computer's network interface must be publicly shared to access the Inte
 
 The virtual environment has the following Architecture
 
-![alt text](https://ibb.co/dkPHwtg)
+![ScreenShot](https://i.ibb.co/zPXtTFJ/topologia.png)
 
 The nodes will be responsible for simulating cyber attacks both for the LAN network and for any of the DMZ servers (WEB or SGBD). A VM based on the Kali Linux distribution has the system tools pre-installed and we've added some other parts of the solution, like the anaconda package python3, scapy to generate custom data packages according to the desired attack type and slowloris script to generate denial service and CICFlowMeter type attacks.
 
@@ -86,7 +85,7 @@ cd /home/ubunutu
 ```
 The steps that are performed by this VM are described in General Flowchart
 
-![alt text](https://ibb.co/48K9n2D)
+![ScreenShot](https://i.ibb.co/pfbGBQs/fluxo-Geral.png)
 
 Run CICFlowMeter tool:
 ```sh
@@ -132,7 +131,7 @@ cd /home/ubunutu/IDS
 python3 smartIDS-Simple.py
 ```
 
-![alt text](https://ibb.co/4FxvNxX)
+![ScreenShot](https://i.ibb.co/WH18K1M/Smart-IDS-Simple.png)
 
 #Advanced Mode
 
@@ -152,7 +151,7 @@ cd /home/ubunutu/IDS
 python3 smartIDS-Advanced.py
 ```
 
-![alt text](https://ibb.co/znBDg9L)
+![ScreenShot](https://i.ibb.co/3rjQb68/Smart-IDS-Advanced.png)
 
 The results in both modes are displayed in the run panel and can be exported in .txt, .json formats and saved in the Mysql database installed on the VM IDS. Access is via PHPmyAdmin.
 
