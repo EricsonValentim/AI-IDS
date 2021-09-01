@@ -137,7 +137,7 @@ python3 smartIDS-Simple.py
 
 ## Advanced Mode
 
-In this mode the user can load a model in .pkl format that has been trained and tested beforehand. Packages must be preinstalled with the ** pip install ** command.
+In this mode the user can load a model in .pkl format that has been trained and tested beforehand. Packages must be preinstalled with the **pip install** command.
 Specific Imports must be inserted directly into the smartIDS-Advanced interface code.
 
 Initially it is necessary to train and evaluate your model before carrying out the loading. The CSE-CIC-IDS2018 dataset,
