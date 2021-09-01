@@ -168,7 +168,7 @@ Results:
 
 Kali Linux is a GNU/Linux distribution based on Debian, considered to be the successor of Back Track. The project features several improvements as well as more apps. It is primarily aimed at auditing and general computer security. It is developed and maintained by Offensive Security Ltd.
 
-More information about how to use Kali Linux tools, refer to the [Kali tools documentation]([https://www.kali.org/tools/]).
+More information about how to use Kali Linux tools, refer to the [Kali tools documentation](https://www.kali.org/tools/).
 
 This VM is located in the attack network.
 Responsible for executing attacks for IDS, server and DMZ services (WEB and SGBD) and LAN. This system has several tools installed to perform network intrusion tests.
