@@ -37,7 +37,7 @@ To install and run the virtual environment, the following hardware requirements 
 
 - 150GB of storage 
 - 16 GB of RAM memory
-- Intel or AMD 4-core processor
+- Intel (core I3 3 generation) or AMD 4-core processor
 - Ethernet network card
 
 
@@ -137,7 +137,7 @@ python3 smartIDS-Simple.py
 
 #Advanced Mode
 
-In this mode the user can load a model in (.PKL) format that has been trained and tested beforehand. Packages must be preinstalled with the pip install command.
+In this mode the user can load a model in .pkl format that has been trained and tested beforehand. Packages must be preinstalled with the pip install command.
 Specific Imports must be inserted directly into the smartIDS-Advanced interface code.
 
 Initially it is necessary to train and evaluate your model before carrying out the loading. The CSE-CIC-IDS2018 dataset,
@@ -145,7 +145,7 @@ Initially it is necessary to train and evaluate your model before carrying out t
 
 In the project's Google Drive, we make available a dataset containing network traffic of the Benigno type for training and testing the user-customized models. During project development new datasets will be added to Google Drive. You need to download and upload them to VM IDS.
 
-  After performing the training and exporting your model in (.pkl) format, following the project examples, just start the interface in advanced mode and load your model.
+  After performing the training and exporting your model in .pkl format, following the project examples, just start the interface in advanced mode and load your model.
 
 Execution of the graphical interface in advanced mode:
 ```sh
