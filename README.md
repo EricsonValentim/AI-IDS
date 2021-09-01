@@ -119,7 +119,7 @@ This does not prevent use and modification by advanced users.
 
 The interface is divided into 2 modes of operation: simple and advanced.
 
-#Simple Mode
+## Simple Mode
 
 The simple mode has 4 techniques that were previously trained and tested with the aid of CSE-CIC-IDS2018.
 In this mode, the user tests his datasets by choosing the type of network traffic Attacks and predefined models:
@@ -135,7 +135,7 @@ python3 smartIDS-Simple.py
 
 ![ScreenShot](https://i.ibb.co/WH18K1M/Smart-IDS-Simple.png)
 
-#Advanced Mode
+## Advanced Mode
 
 In this mode the user can load a model in .pkl format that has been trained and tested beforehand. Packages must be preinstalled with the pip install command.
 Specific Imports must be inserted directly into the smartIDS-Advanced interface code.
