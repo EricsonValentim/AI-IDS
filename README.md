@@ -98,6 +98,8 @@ in .PCAP format and in Realtime mode the capture starts in real time after choos
 The tool generates a .CSV file containing 84 resources of the analyzed network traffic and a Label field that is used as the target class
 during training and testing of AI techniques.
 
+![ScreenShot](https://i.ibb.co/hZFgrSk/CICFlow-Meter.png)
+
 The tool's output .CSV files are available in the directory `/home/ubunutu/CICFlowMeter-master/data/daily`
 
 To create new datasets it is necessary to label the .CSV file that CICFlowMeter generated. By default the Label field is set to:
