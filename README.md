@@ -11,7 +11,7 @@ A detailed example for expert users is available along with the output file prep
 
 
 
-Dataset used to create predefined templates: ![CSE-CIC-IDS2018](https://www.unb.ca/cic/datasets/ids-2018.html)
+Dataset used to create predefined templates: [CSE-CIC-IDS2018](https://www.unb.ca/cic/datasets/ids-2018.html)
 
 The data used to train the classifier is taken from the CSE-CIC-IDS2018 dataset provided by the Canadian Institute of Cyber Security. It was created by capturing all network traffic during ten days of operation within a controlled network environment on AWS, where realistic background traffic and different attack scenarios were conducted. As a result, the dataset contains both benign network traffic and captures of the most common network attacks. The dataset is composed of raw network captures in pcap format as well as csv files created using CICFlowMeter-V3 containing 80 stats of the individual network flows combined with their corresponding labels. A network flow is defined as an aggregation of interrelated network packets identified by the following properties:
 
@@ -46,7 +46,7 @@ It is recommended to use Windows 10 PRO operating system.
 ## Download and Install
 
 The virtual machines, emulated environment project (GNS3) and software used in the project are available for download via the link below in the 
-![Google Drive repository](https://drive.google.com/drive/folders/1hSm_f8KMQ8OnMLjIvOQyZ6wNN-5ykEj2?usp=sharing
+[Google Drive repository](https://drive.google.com/drive/folders/1hSm_f8KMQ8OnMLjIvOQyZ6wNN-5ykEj2?usp=sharing
 )
 
 By downloading the entire repository and installing the software. You need to adjust the virtual hardware settings on each VM as per your needs. For example the VM IDS comes configured with 16 GB of RAM memory and 3 virtual processors. We recommend using at least 4 GB on this VM. The others can run with at least 1.5 GB of memory. Remember that this process must be performed in Virtual Box and in GNS3.
