@@ -54,7 +54,9 @@ By downloading the entire repository and installing the software. You need to ad
 
 The host computer's network interface must be publicly shared to access the Internet through the virtual environment.
 
-The virtual environment has the following [Architecture](https://github.com/EricsonValentim/AI-IDS/blob/main/topologia-EN.png)
+The virtual environment has the following Architecture
+
+![alt text](https://ibb.co/dkPHwtg)
 
 The nodes will be responsible for simulating cyber attacks both for the LAN network and for any of the DMZ servers (WEB or SGBD). A VM based on the Kali Linux distribution has the system tools pre-installed and we've added some other parts of the solution, like the anaconda package python3, scapy to generate custom data packages according to the desired attack type and slowloris script to generate denial service and CICFlowMeter type attacks.
 
@@ -82,7 +84,9 @@ Start the script with network routes:
 cd /home/ubunutu
 ./script
 ```
-The steps that are performed by this VM are described in [General Flowchart](https://github.com/EricsonValentim/AI-IDS/blob/main/fluxoGeral.png)
+The steps that are performed by this VM are described in General Flowchart
+
+![alt text](https://ibb.co/48K9n2D)
 
 Run CICFlowMeter tool:
 ```sh
@@ -108,7 +112,7 @@ nano labeled.py
 Label is set to binary. Change the input path and the conversion function should be commented out according to the file's traffic type. "0" for Benign type network traffic and
 "1" for malicious network traffic.
 
-Through the developed graphical interface [smartIDS](https://github.com/EricsonValentim/AI-IDS/blob/main/smartIDS.png) it is possible to run the tests in an easier way.
+Through the developed graphical interface smartIDS it is possible to run the tests in an easier way.
 This does not prevent use and modification by advanced users.
 
 
@@ -128,6 +132,8 @@ cd /home/ubunutu/IDS
 python3 smartIDS-Simple.py
 ```
 
+![alt text](https://ibb.co/4FxvNxX)
+
 #Advanced Mode
 
 In this mode the user can load a model in (.PKL) format that has been trained and tested beforehand. Packages must be preinstalled with the pip install command.
@@ -146,6 +152,8 @@ cd /home/ubunutu/IDS
 python3 smartIDS-Advanced.py
 ```
 
+![alt text](https://ibb.co/znBDg9L)
+
 The results in both modes are displayed in the run panel and can be exported in .txt, .json formats and saved in the Mysql database installed on the VM IDS. Access is via PHPmyAdmin.
 
 Results: 
@@ -158,6 +166,8 @@ Results:
 ## VM Kali Linux
 
 Kali Linux is a GNU/Linux distribution based on Debian, considered to be the successor of Back Track. The project features several improvements as well as more apps. It is primarily aimed at auditing and general computer security. It is developed and maintained by Offensive Security Ltd.
+
+More information about how to use Kali Linux tools, refer to the [Kali tools documentation]([https://www.kali.org/tools/]).
 
 This VM is located in the attack network.
 Responsible for executing attacks for IDS, server and DMZ services (WEB and SGBD) and LAN. This system has several tools installed to perform network intrusion tests.
