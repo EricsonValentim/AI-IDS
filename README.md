@@ -1,4 +1,4 @@
-# AI/IDS - version 1.4
+# AI/IDS - version 1.2
 
 A Methodology to verify IDS AI-basedApproaches on Emulated Networks
 
