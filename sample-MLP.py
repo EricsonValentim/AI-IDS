@@ -6,12 +6,10 @@ import pandas as pd
 
 from sklearn.model_selection import train_test_split
 
-
 # Função para carregar o Dataset
 def load_data(data, feat_name):
     df= pd.read_csv(data, names=feat_name, low_memory=False)
     return df
-
 
 colunas_dataset = ['Timestamp', 'Flow Duration', 'Tot Fwd Pkts',
               'Tot Bwd Pkts', 'TotLen Fwd Pkts', 'TotLen Bwd Pkts', 'Fwd Pkt Len Max',
