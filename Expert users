@@ -8,4 +8,4 @@ To facilitate the creation of new datasets we developed a script to insert the l
 the CICFlowMeter tool which generates an output file in (.CSV) format. 
 After inserting the labels in this file, it is possible to train in different techniques for different types of attacks.
 
-The preprocessing step is detailed in the preprocessing.py configuration file.
+The preprocessing step is detailed in the preprocessing.py configuration file. 
