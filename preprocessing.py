@@ -6,7 +6,6 @@ import numpy as np
 import pandas as pd
 from sklearn.utils import shuffle
 
-
 entrada = 'C:/AI-IDS/Sample/In/captureCSV-CICFlowMeter.csv'
 
 saida = 'C:/AI-IDS/Sample/Out/preprossesing.csv'
